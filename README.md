@@ -36,5 +36,5 @@ The project is deployed on Vercel. Check out the live demo here:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/AnkitYadav07/chatbot-app.git
+   git clone https://github.com/AnkitYadav07/chatbot-app-UI.git
    cd chatbot-app
