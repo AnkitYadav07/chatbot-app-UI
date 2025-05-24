@@ -1,0 +1,129 @@
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.sidebar {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dark-mode .sidebar {
+  background: rgba(0, 0, 0, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 1.8rem;
+  color: #2D3436;
+  margin-bottom: 20px;
+}
+
+.dark-mode .sidebar h2 {
+  color: #E0E0E0;
+}
+
+.conversation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.conversation-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.conversation-item:hover {
+  background: rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+.dark-mode .conversation-item:hover {
+  background: rgba(135, 206, 235, 0.3);
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.dark-mode .avatar {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #000000; /* Change text color to black in night theme */
+}
+
+.conv-info {
+  flex: 1;
+}
+
+.conv-info h3 {
+  font-size: 1.2rem;
+  color: #2D3436;
+  margin: 0;
+}
+
+.dark-mode .conv-info h3 {
+  color: #E0E0E0;
+}
+
+.conv-info p {
+  font-size: 1rem;
+  color: #636E72;
+  margin: 2px 0 0;
+}
+
+.dark-mode .conv-info p {
+  color: #A0AEC0;
+}
+
+.conv-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.conv-meta span {
+  font-size: 0.9rem;
+  color: #636E72;
+}
+
+.dark-mode .conv-meta span {
+  color: #A0AEC0;
+}
+
+.unread-count {
+  background: #FF5E62;
+  color: #FFFFFF;
+  padding: 2px 6px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+}

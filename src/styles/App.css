@@ -1,0 +1,97 @@
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  transition: background 0.3s ease;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.app.dark-mode {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
+  color: #E0E0E0;
+}
+
+.app-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chat-section {
+  flex: 1;
+  display: flex;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease;
+  overflow: hidden;
+}
+
+.dark-mode .chat-section {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.chat-content {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chat-main {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.no-chat-selected {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6B48FF;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .chat-content {
+    flex-direction: column;
+  }
+
+  .chat-main {
+    flex: 1;
+  }
+}

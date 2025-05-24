@@ -1,0 +1,183 @@
+.ai-copilot {
+  flex: 1;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.dark-mode .ai-copilot {
+  background: rgba(0, 0, 0, 0.25);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ai-copilot h3 {
+  font-size: 1.5rem;
+  color: #2D3436;
+  margin: 0;
+}
+
+.dark-mode .ai-copilot h3 {
+  color: #E0E0E0;
+}
+
+.copilot-messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+/* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+.copilot-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.copilot-messages::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.copilot-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  border-radius: 4px;
+}
+
+.dark-mode .copilot-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  animation: messageFadeIn 0.5s ease forwards;
+}
+
+.message-copilot .message-content {
+  background: rgba(224, 231, 255, 0.8);
+  border-radius: 10px 10px 10px 0;
+  padding: 10px 15px;
+  max-width: 70%;
+  backdrop-filter: blur(5px);
+}
+
+.dark-mode .message-copilot .message-content {
+  background: rgba(74, 85, 104, 0.8);
+}
+
+.message-you {
+  justify-content: flex-end;
+}
+
+.message-you .message-content {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  color: #FFFFFF;
+  border-radius: 10px 10px 0 10px;
+  padding: 10px 15px;
+  max-width: 70%;
+}
+
+.dark-mode .message-you .message-content {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #2D3436;
+}
+
+.message-content p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.message-content span {
+  font-size: 0.9rem;
+  color: #636E72;
+  display: block;
+  margin-top: 5px;
+}
+
+.dark-mode .message-content span {
+  color: #A0AEC0;
+}
+
+.copilot-input {
+  display: flex;
+  align-items: center;
+}
+
+.copilot-input form {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping */
+  gap: 15px; /* Consistent gap for spacing */
+  width: 100%; /* Ensure the form takes full width */
+  align-items: center;
+}
+
+.copilot-input input {
+  flex: 1; /* Allow input to take remaining space */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: #2D3436;
+}
+
+.dark-mode .copilot-input input {
+  background: rgba(0, 0, 0, 0.3);
+  color: #E0E0E0;
+}
+
+.copilot-input button {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+.dark-mode .copilot-input button {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #2D3436;
+}
+
+.copilot-input button:hover {
+  background: linear-gradient(135deg, #2A3D45 0%, #1C2526 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.dark-mode .copilot-input button:hover {
+  background: linear-gradient(135deg, #E0F7FA 0%, #87CEEB 100%);
+}
+
+@media (max-width: 768px) {
+  .ai-copilot {
+    flex: none;
+    height: 200px;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+  }
+
+  .dark-mode .ai-copilot {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .copilot-input form {
+    gap: 10px; /* Slightly smaller gap on mobile for better fit */
+  }
+
+  .copilot-input button {
+    padding: 10px 15px; /* Slightly reduce button padding on mobile */
+  }
+}

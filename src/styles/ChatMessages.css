@@ -1,0 +1,83 @@
+@keyframes messageFadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Customize scrollbar for WebKit browsers (Chrome, Safari) */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  border-radius: 4px;
+}
+
+.dark-mode .chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  animation: messageFadeIn 0.5s ease forwards;
+}
+
+.message-other .message-content {
+  background: rgba(224, 231, 255, 0.8);
+  border-radius: 10px 10px 10px 0;
+  padding: 10px 15px;
+  max-width: 70%;
+  backdrop-filter: blur(5px);
+}
+
+.dark-mode .message-other .message-content {
+  background: rgba(74, 85, 104, 0.8);
+}
+
+.message-you {
+  justify-content: flex-end;
+}
+
+.message-you .message-content {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  color: #FFFFFF;
+  border-radius: 10px 10px 0 10px;
+  padding: 10px 15px;
+  max-width: 70%;
+}
+
+.dark-mode .message-you .message-content {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #2D3436;
+}
+
+.message-content p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.message-content span {
+  font-size: 0.9rem;
+  color: #636E72;
+  display: block;
+  margin-top: 5px;
+}
+
+.dark-mode .message-content span {
+  color: #A0AEC0;
+}

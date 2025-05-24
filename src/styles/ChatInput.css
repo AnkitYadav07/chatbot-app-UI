@@ -1,0 +1,84 @@
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  font-family: 'Poppins', sans-serif;
+}
+
+.dark-mode .chat-input {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.chat-input form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: #2D3436;
+}
+
+.dark-mode .chat-input input {
+  background: rgba(0, 0, 0, 0.3);
+  color: #E0E0E0;
+}
+
+.chat-input button {
+  background: linear-gradient(135deg, #1C2526 0%, #2A3D45 100%);
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+}
+
+.dark-mode .chat-input button {
+  background: linear-gradient(135deg, #87CEEB 0%, #E0F7FA 100%);
+  color: #2D3436;
+}
+
+.chat-input button:hover {
+  background: linear-gradient(135deg, #2A3D45 0%, #1C2526 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.dark-mode .chat-input button:hover {
+  background: linear-gradient(135deg, #E0F7FA 0%, #87CEEB 100%);
+}
+
+.suggested-action {
+  margin-top: 10px;
+}
+
+.suggested-action p {
+  font-size: 1rem;
+  color: #636E72;
+  margin: 0;
+}
+
+.dark-mode .suggested-action p {
+  color: #A0AEC0;
+}
+
+.suggested-action span {
+  color: #6B48FF;
+  cursor: pointer;
+}
+
+.suggested-action span:hover {
+  color: #00D4FF;
+}
