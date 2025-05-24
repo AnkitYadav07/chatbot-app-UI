@@ -9,7 +9,7 @@ The project is deployed on Vercel. Check out the live demo here:
 
 ## Features
 
-- **Sidebar with Conversations**: Displays a list of conversations with user avatars (e.g., 'L' for Luis, 'B' for Bug Report) and unread message counts.
+- **Sidebar with Conversations**: Displays a list of conversations with user avatars (e.g., 'S' for Shivam, 'B' for Bug Report) and unread message counts.
 - **Chat Interface**: Allows admins to chat with users, with smooth scrolling to the latest messages.
 - **AI Copilot**: An AI assistant that summarizes conversations or provides suggestions, with its own chat section.
 - **Day and Night Themes**:
